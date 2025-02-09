@@ -1,6 +1,3 @@
----
-outline: deep
----
 
 # TS的前置知识
 

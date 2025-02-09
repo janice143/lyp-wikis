@@ -4,6 +4,10 @@ import { defineConfig } from 'vitepress';
 export default defineConfig({
   title: 'LYP Wikis',
   themeConfig: {
+    outline: {
+      label: '页面导航',
+      level: 'deep'
+    },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       {
