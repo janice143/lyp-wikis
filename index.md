@@ -29,8 +29,20 @@ features:
     title: LeetCode Wiki
     details: LeetCode算法知识体系，系统梳理数组、树、图等数据结构，涵盖排序、搜索、动态规划等算法及问题求解技巧。
     link: /wiki-source/leetcode-wiki
-  # - title: Feature C
-  #   details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - icon: 
+      src: /images/react-logo-programming-2-svgrepo-com.svg
+    title: React Wiki
+    details: React知识体系，系统整理React核心知识，包括JSX语法、组件开发、状态管理、生命周期、Hooks等，帮助深入理解React的工作原理和最佳实践，提升开发效率与代码质量。
+    link: /wiki-source/react-wiki
+  - icon: 🎭
+    title: Formily Wiki
+    details: Formily知识体系，全面覆盖Formily框架的核心概念、Schema驱动设计、动态表单、表单验证、状态管理等功能，助力构建灵活高效的表单系统。
+    link: /wiki-source/formily-wiki
+  - icon: 
+      src: /images/form-svgrepo-com.svg
+    title: Form Wiki
+    details: 中后台表单知识体系，全面梳理中后台表单设计与实现的关键知识点，涵盖表单布局、验证、动态渲染、审批流、搜索筛选等常见模式与优化方案，帮助提升表单开发效率与用户体验。
+    link: /wiki-source/form-wiki
 ---
 
 

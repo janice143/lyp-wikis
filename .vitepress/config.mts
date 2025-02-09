@@ -191,6 +191,127 @@ export default defineConfig({
             items: [{ text: '33个概念', link: '/wiki-source/js-33/index' }]
           }
         ]
+      },
+      {
+        text: 'React知识库',
+        items: [
+          {
+            text: '知识层',
+            items: [
+              { text: '介绍', link: '/wiki-source/react-wiki/introduction' },
+              { text: 'React 基础', link: '/wiki-source/react-wiki/basic' },
+              { text: 'Hooks', link: '/wiki-source/react-wiki/hooks' },
+              {
+                text: 'React 核心特性',
+                link: '/wiki-source/react-wiki/secondary'
+              },
+              { text: 'React 进阶', link: '/wiki-source/react-wiki/advanced' },
+              { text: 'React 路由', link: '/wiki-source/react-wiki/router' },
+              { text: 'React 状态管理', link: '/wiki-source/react-wiki/state' },
+              {
+                text: 'React 与异步操作',
+                link: '/wiki-source/react-wiki/async'
+              },
+              { text: 'React 与样式', link: '/wiki-source/react-wiki/style' },
+              {
+                text: 'React 性能优化',
+                link: '/wiki-source/react-wiki/performance'
+              },
+              {
+                text: 'React 生态系统',
+                link: '/wiki-source/react-wiki/geography'
+              },
+              {
+                text: 'React 最佳实践',
+                link: '/wiki-source/react-wiki/practice'
+              },
+              {
+                text: 'React 未来展望',
+                link: '/wiki-source/react-wiki/future'
+              },
+              {
+                text: 'React 底层原理',
+                link: '/wiki-source/react-wiki/under-the-hood'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        text: 'Formily知识库',
+        items: [
+          {
+            text: '知识层',
+            items: [
+              { text: '介绍', link: '/wiki-source/formily-wiki/introduction' }
+            ]
+          },
+          {
+            text: '意识层',
+            items: [
+              { text: '介绍', link: '/wiki-source/formily-wiki/introduction' },
+              {
+                text: 'formily是如何产生的',
+                link: '/wiki-source/formily-wiki/how-formily-emerge'
+              },
+              {
+                text: 'formily内部的演变',
+                link: '/wiki-source/formily-wiki/formily-inner-change'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        text: 'Form知识库',
+        items: [
+          {
+            text: '知识层',
+            items: [
+              { text: '介绍', link: '/wiki-source/form-wiki/introduction' },
+              {
+                text: '表单设计与需求分析',
+                link: '/wiki-source/form-wiki/form-design'
+              },
+              {
+                text: '表单控件的选择与使用',
+                link: '/wiki-source/form-wiki/form-controller'
+              },
+              {
+                text: '表单验证与校验',
+                link: '/wiki-source/form-wiki/validate'
+              },
+              {
+                text: '表单交互与用户体验',
+                link: '/wiki-source/form-wiki/experience'
+              },
+              {
+                text: '表单提交与数据处理',
+                link: '/wiki-source/form-wiki/submit'
+              },
+              {
+                text: '表单性能与优化',
+                link: '/wiki-source/form-wiki/performance'
+              },
+              {
+                text: '表单样式与响应式设计',
+                link: '/wiki-source/form-wiki/style'
+              },
+              {
+                text: '表单的安全性与防护',
+                link: '/wiki-source/form-wiki/safe'
+              },
+              {
+                text: '常见的中后台表单模式与案例',
+                link: '/wiki-source/form-wiki/pattern'
+              },
+              {
+                text: '常见的中后台表单组件库和框架',
+                link: '/wiki-source/form-wiki/safe'
+              }
+            ]
+          }
+        ]
       }
     ],
     lastUpdated: {
@@ -206,5 +327,15 @@ export default defineConfig({
   },
   markdown: {
     math: true
-  }
+  },
+  head: [
+    // Microsoft Clarity tracking script
+    [
+      'script',
+      {
+        type: 'text/javascript',
+        src: './clarity.js'
+      }
+    ]
+  ]
 });
