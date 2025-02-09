@@ -1,1 +1,1 @@
-![alt text](icons/cover-page.png)
+![alt text](.vitepress/public/icons/cover-page.png)
