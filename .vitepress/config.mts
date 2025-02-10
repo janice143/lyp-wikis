@@ -312,6 +312,48 @@ export default defineConfig({
             ]
           }
         ]
+      },
+      {
+        text: 'LangChain 的 RAG（检索增强生成）入门与实战',
+        items: [
+          {
+            text: '知识层',
+            items: [
+              {
+                text: 'RAG 基础概念',
+                link: '/wiki-source/langchain-rag/introduction'
+              },
+              {
+                text: 'LangChain 框架概述',
+                link: '/wiki-source/langchain-rag/langchain-introduction'
+              },
+              {
+                text: '构建 RAG 系统的核心流程',
+                link: '/wiki-source/langchain-rag/rag-core'
+              },
+              {
+                text: '搭建基础 RAG 应用',
+                link: '/wiki-source/langchain-rag/rag-basic'
+              },
+              {
+                text: 'RAG 进阶优化',
+                link: '/wiki-source/langchain-rag/rag-advanced'
+              },
+              {
+                text: 'RAG 应用场景',
+                link: '/wiki-source/langchain-rag/rag-app'
+              },
+              {
+                text: 'LangChain + RAG 案例实战',
+                link: '/wiki-source/langchain-rag/langchain-rag-demo'
+              },
+              {
+                text: 'RAG 未来发展与挑战',
+                link: '/wiki-source/langchain-rag/rag-future'
+              }
+            ]
+          }
+        ]
       }
     ],
     lastUpdated: {

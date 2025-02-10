@@ -42,7 +42,12 @@ features:
       src: /images/form-svgrepo-com.svg
     title: Form Wiki
     details: 中后台表单知识体系，全面梳理中后台表单设计与实现的关键知识点，涵盖表单布局、验证、动态渲染、审批流、搜索筛选等常见模式与优化方案，帮助提升表单开发效率与用户体验。
-    link: /wiki-source/form-wiki
+    link: /wiki-source/form-wiki/introduction
+  - icon: 
+      src: /images/devil-svgrepo-com.svg
+    title: LangChain 的 RAG（检索增强生成）
+    details: 本小册系统性介绍基于 LangChain 的 RAG技术，从基础概念到实战应用，帮助读者掌握如何构建智能检索增强生成系统，实现高效知识问答、文档总结等任务。
+    link: /wiki-source/langchain-rag/introduction
 ---
 
 
