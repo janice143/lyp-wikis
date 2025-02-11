@@ -354,6 +354,40 @@ export default defineConfig({
             ]
           }
         ]
+      },
+      {
+        text: '浏览器知识库',
+        items: [
+          {
+            text: '知识层',
+            items: [
+              {
+                text: '浏览器的基本构成',
+                link: '/wiki-source/browser-wiki/introduction'
+              },
+              {
+                text: '从 URL 到页面呈现',
+                link: '/wiki-source/browser-wiki/url-to-page'
+              },
+              {
+                text: '渲染流程——从 HTML 到页面',
+                link: '/wiki-source/browser-wiki/render'
+              },
+              {
+                text: 'JavaScript 在浏览器中的执行',
+                link: '/wiki-source/browser-wiki/js'
+              },
+              {
+                text: '浏览器性能优化',
+                link: '/wiki-source/browser-wiki/performance'
+              },
+              {
+                text: '浏览器安全',
+                link: '/wiki-source/browser-wiki/safety.md'
+              }
+            ]
+          }
+        ]
       }
     ],
     lastUpdated: {

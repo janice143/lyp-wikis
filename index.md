@@ -48,6 +48,10 @@ features:
     title: LangChain 的 RAG（检索增强生成）
     details: 本小册系统性介绍基于 LangChain 的 RAG技术，从基础概念到实战应用，帮助读者掌握如何构建智能检索增强生成系统，实现高效知识问答、文档总结等任务。
     link: /wiki-source/langchain-rag/introduction
+  - icon: 🌐
+    title: Browser Wiki
+    details: 本小册详细剖析浏览器的工作原理，从用户输入 URL 到最终渲染页面的整个流程，帮助读者深入理解浏览器内部机制，提高前端开发性能优化的能力。
+    link: /wiki-source/browser-wiki/introduction
 ---
 
 
