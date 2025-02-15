@@ -52,6 +52,10 @@ features:
     title: Browser Wiki
     details: 本小册详细剖析浏览器的工作原理，从用户输入 URL 到最终渲染页面的整个流程，帮助读者深入理解浏览器内部机制，提高前端开发性能优化的能力。
     link: /wiki-source/browser-wiki/introduction
+  - icon: A
+    title: Axios Wiki
+    details: Axios 是一个基于 Promise 的 HTTP 客户端，用于浏览器和 Node.js 中进行 HTTP 请求。
+    link: /wiki-source/axios-wiki/introduction
 ---
 
 

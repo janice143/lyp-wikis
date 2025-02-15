@@ -13,9 +13,9 @@ export default defineConfig({
       {
         text: 'My Blog',
         link: 'https://www.believed-breadfruit.top/archives/'
-      },
-      { text: 'TypeScript Wiki', link: '/wiki-source/typescript-wiki' },
-      { text: 'LeetCode Wiki', link: '/wiki-source/leetcode-wiki' }
+      }
+      // { text: 'TypeScript Wiki', link: '/wiki-source/typescript-wiki' },
+      // { text: 'LeetCode Wiki', link: '/wiki-source/leetcode-wiki' },
     ],
 
     sidebar: [
@@ -384,6 +384,102 @@ export default defineConfig({
               {
                 text: '浏览器安全',
                 link: '/wiki-source/browser-wiki/safety.md'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        text: 'Axios知识库',
+        items: [
+          {
+            text: '知识层',
+            items: [
+              {
+                text: '引言',
+                link: '/wiki-source/axios-wiki/introduction'
+              },
+              {
+                text: 'Axios 安装与配置',
+                link: '/wiki-source/axios-wiki/install'
+              },
+              {
+                text: 'Axios 请求方法',
+                link: '/wiki-source/axios-wiki/get'
+              },
+              {
+                text: 'Axios 响应处理',
+                link: '/wiki-source/axios-wiki/response'
+              },
+              {
+                text: 'Axios 与异步操作',
+                link: '/wiki-source/axios-wiki/async'
+              },
+              {
+                text: 'Axios 与请求拦截器',
+                link: '/wiki-source/axios-wiki/intercept'
+              },
+              {
+                text: 'Axios 与请求拦截器',
+                link: '/wiki-source/axios-wiki/request-intercept'
+              },
+              {
+                text: 'Axios 与响应拦截器',
+                link: '/wiki-source/axios-wiki/response-intercept'
+              },
+              {
+                text: '错误处理与重试机制',
+                link: '/wiki-source/axios-wiki/error'
+              },
+              {
+                text: 'Axios 与跨域请求',
+                link: '/wiki-source/axios-wiki/cors'
+              },
+              {
+                text: '优化与性能',
+                link: '/wiki-source/axios-wiki/performance'
+              },
+              {
+                text: 'Axios 与安全性',
+                link: '/wiki-source/axios-wiki/safety'
+              },
+              {
+                text: '最佳实践与常见问题',
+                link: '/wiki-source/axios-wiki/safety'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        text: 'MobX知识库',
+        items: [
+          {
+            text: '知识层',
+            items: [
+              {
+                text: '简介',
+                link: '/wiki-source/mobx-wiki/introduction'
+              },
+              {
+                text: 'MobX 核心概念',
+                link: '/wiki-source/mobx-wiki/core-idea'
+              },
+              {
+                text: 'MobX 在 React 中的使用',
+                link: '/wiki-source/mobx-wiki/react'
+              },
+              {
+                text: 'MobX 进阶',
+                link: '/wiki-source/mobx-wiki/advance'
+              },
+              {
+                text: 'MobX 与其他状态管理方案对比',
+                link: '/wiki-source/mobx-wiki/compare'
+              },
+              {
+                text: '未来展望',
+                link: '/wiki-source/mobx-wiki/future'
               }
             ]
           }
