@@ -56,6 +56,21 @@ features:
     title: Axios Wiki
     details: Axios 是一个基于 Promise 的 HTTP 客户端，用于浏览器和 Node.js 中进行 HTTP 请求。
     link: /wiki-source/axios-wiki/introduction
+  - icon: 
+      src: /images/Allergens-Celery--Streamline-Plump.png
+    title: Eslint Wiki
+    details: 本小册全面介绍 ESLint，从基本概念到高级配置，帮助开发者深入理解如何通过 ESLint 实现代码质量控制、自动化检查及集成最佳实践，提升项目代码质量与团队协作效率。
+    link: /wiki-source/eslint-wiki/introduction
+  - icon: 
+      src: /images/Align-Bottom-Frame--Streamline-Plump.png
+    title: Webpack Wiki
+    details: 本小册全面介绍 ESLint，从基本概念到高级配置，帮助开发者深入理解如何通过 ESLint 实现代码质量控制、自动化检查及集成最佳实践，提升项目代码质量与团队协作效率。
+    link: /wiki-source/webpack-wiki/introduction
+  - icon: M
+    title: MobX Wiki
+    details: 本小册系统性介绍 MobX，从基础概念到高级特性，帮助开发者理解其核心思想，并掌握如何在 React 或其他框架中高效地管理状态，实现响应式数据流。
+
+    link: /wiki-source/mobx-wiki/introduction
 ---
 
 

@@ -484,6 +484,122 @@ export default defineConfig({
             ]
           }
         ]
+      },
+      {
+        text: 'Eslint知识库',
+        items: [
+          {
+            text: '知识层',
+            items: [
+              {
+                text: '简介',
+                link: '/wiki-source/eslint-wiki/introduction'
+              },
+              {
+                text: '基础配置',
+                link: '/wiki-source/eslint-wiki/basic'
+              },
+              {
+                text: 'ESLint 规则',
+                link: '/wiki-source/eslint-wiki/rule'
+              },
+              {
+                text: '插件与扩展',
+                link: '/wiki-source/eslint-wiki/plugin'
+              },
+              {
+                text: '高级 ESLint 配置',
+                link: '/wiki-source/eslint-wiki/advanced'
+              },
+              {
+                text: '集成与工作流',
+                link: '/wiki-source/eslint-wiki/workflow'
+              },
+              {
+                text: '性能优化',
+                link: '/wiki-source/eslint-wiki/performance'
+              },
+              {
+                text: 'ESLint 与代码质量',
+                link: '/wiki-source/eslint-wiki/code-quality'
+              },
+              {
+                text: 'ESLint 与团队协作',
+                link: '/wiki-source/eslint-wiki/teamwork'
+              },
+              {
+                text: 'ESLint 项目实战',
+                link: '/wiki-source/eslint-wiki/project'
+              },
+              {
+                text: 'ESLint 与代码质量',
+                link: '/wiki-source/eslint-wiki/code-quality'
+              },
+              {
+                text: '自定义规则',
+                link: '/wiki-source/eslint-wiki/custom-rules'
+              }
+            ]
+          },
+          {
+            text: 'Webpack知识库',
+            items: [
+              {
+                text: '知识层',
+                items: [
+                  {
+                    text: '简介',
+                    link: '/wiki-source/webpack-wiki/introduction'
+                  },
+                  {
+                    text: '核心概念',
+                    link: '/wiki-source/webpack-wiki/core'
+                  },
+                  {
+                    text: '配置',
+                    link: '/wiki-source/webpack-wiki/config'
+                  },
+                  {
+                    text: '模块处理与转换',
+                    link: '/wiki-source/webpack-wiki/loader'
+                  },
+                  {
+                    text: '代码分割与优化',
+                    link: '/wiki-source/webpack-wiki/code-split'
+                  },
+                  {
+                    text: 'Webpack DevServer 与开发模式',
+                    link: '/wiki-source/webpack-wiki/dev-server'
+                  },
+                  {
+                    text: '性能优化',
+                    link: '/wiki-source/webpack-wiki/performance'
+                  },
+                  {
+                    text: '与前端框架集成',
+                    link: '/wiki-source/webpack-wiki/framework'
+                  },
+                  {
+                    text: '与 TypeScript 集成',
+                    link: '/wiki-source/webpack-wiki/typescript'
+                  },
+                  {
+                    text: '与 TypeScript 集成',
+                    link: '/wiki-source/webpack-wiki/typescript'
+                  },
+                  {
+                    text: '与 TypeScript 集成',
+                    link: '/wiki-source/webpack-wiki/typescript'
+                  },
+                  {
+                    text: '与 TypeScript 集成',
+                    link: '/wiki-source/webpack-wiki/typescript'
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ],
     lastUpdated: {

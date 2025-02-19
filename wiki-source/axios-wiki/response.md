@@ -2,8 +2,6 @@
 
 在 Axios 中，**响应数据的处理**是开发过程中至关重要的一环。不同的 API 可能返回不同的数据格式，此外，还需要对 **HTTP 状态码进行分类处理**，包括 **成功状态（2xx）、客户端错误（4xx）、服务器错误（5xx）**。本章将详细介绍如何**正确解析 Axios 响应、处理不同类型的返回数据，并进行错误管理**。
 
----
-
 ## **1. 处理响应数据**
 
 ### **1.1 获取 Axios 响应信息**
@@ -35,7 +33,7 @@ axios.get("https://jsonplaceholder.typicode.com/posts/1")
 ```
 
 | 属性 | 说明 |
-|------|------|
+|||
 | `data` | 服务器返回的数据 |
 | `status` | HTTP 状态码（如 `200 OK`, `404 Not Found`） |
 | `headers` | 响应头 |
@@ -53,8 +51,6 @@ axios.get("https://api.example.com/data")
   })
   .catch(error => console.error("请求失败:", error));
 ```
-
----
 
 ## **2. 处理不同的响应类型**
 
@@ -93,20 +89,16 @@ axios.get("https://example.com/image.jpg", { responseType: "blob" })
 - 下载文件（PDF、Excel）
 - 预览图片
 
----
-
 ## **3. 处理 HTTP 状态码**
 
 ### **3.1 常见 HTTP 状态码分类**
 
 | 状态码 | 含义 | 处理方式 |
-|--------|------|---------|
+|--|||
 | **2xx** | 请求成功 | 直接处理 `response.data` |
 | **3xx** | 重定向 | 处理 `Location` 头或 `window.location.href` |
 | **4xx** | 客户端错误 | 提示用户请求错误（如 `404 Not Found`） |
 | **5xx** | 服务器错误 | 记录错误日志，提示服务器异常 |
-
----
 
 ### **3.2 处理 `2xx` 成功状态**
 
@@ -120,8 +112,6 @@ axios.get("https://jsonplaceholder.typicode.com/posts/1")
     }
   });
 ```
-
----
 
 ### **3.3 处理 `4xx` 客户端错误**
 
@@ -156,8 +146,6 @@ axios.get("https://jsonplaceholder.typicode.com/posts/9999")
 - `403 Forbidden`：提示用户权限不足
 - `404 Not Found`：显示友好的 404 页面
 
----
-
 ### **3.4 处理 `5xx` 服务器错误**
 
 常见的 `5xx` 错误：
@@ -183,8 +171,6 @@ axios.get("https://api.example.com/data")
 - **记录日志，排查后端错误**
 - **友好的错误提示**
 - **自动重试（如 503 服务器过载）**
-
----
 
 ## **4. 统一错误处理（响应拦截器）**
 
@@ -223,8 +209,6 @@ axios.interceptors.response.use(
 - **减少代码重复**
 - **自动重定向到登录页**
 - **统一错误提示**
-
----
 
 ## **总结**
 

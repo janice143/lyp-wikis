@@ -9,8 +9,6 @@
 
 Axios 提供了基于 **Promise** 的异步处理机制，并支持 `async/await` 语法，简化代码结构。同时，Axios 还提供了 **`axios.all()` 和 `axios.spread()`** 来处理多个请求并发。
 
----
-
 ## **1. 异步请求与 Promise**
 
 ### **1.1 使用 `then()` 和 `catch()`**
@@ -32,8 +30,6 @@ axios.get("https://jsonplaceholder.typicode.com/posts/1")
 - `then()` 处理成功响应
 - `catch()` 处理错误（如 `404 Not Found` 或 `500 Internal Server Error`）
 - 代码结构清晰，适用于**单个请求**
-
----
 
 ### **1.2 使用 `async/await` 语法**
 
@@ -57,8 +53,6 @@ fetchPost();
 - **语法更加简洁**
 - **代码逻辑更清晰**
 - **可以和 `try/catch` 结合，统一处理错误**
-
----
 
 ### **1.3 在 `async/await` 里处理多个请求**
 
@@ -85,8 +79,6 @@ fetchMultipleData();
 - 需要**按顺序执行**多个请求（如：获取用户信息 → 获取该用户的文章）
 - 依赖前一个请求的数据进行后续请求
 
----
-
 ## **2. 并发请求处理**
 
 在某些情况下，我们可能需要**同时发送多个请求**，例如：
@@ -96,8 +88,6 @@ fetchMultipleData();
 - **提高请求效率**
 
 Axios 提供了 `axios.all()` 和 `axios.spread()` 来并发执行多个请求。
-
----
 
 ### **2.1 使用 `axios.all()`**
 
@@ -119,8 +109,6 @@ axios.all([
 
 - `axios.all([请求1, 请求2])` 并发执行多个请求
 - `axios.spread()` 用于拆分响应，分别处理多个请求结果
-
----
 
 ### **2.2 使用 `Promise.all()` 代替 `axios.all()`**
 
@@ -147,11 +135,9 @@ fetchMultipleData();
 ✅ **对比**
 
 | 方式 | 适用场景 |
-|------|--------|
+||--|
 | `axios.all()` + `axios.spread()` | 适用于 Axios 专用，代码更清晰 |
 | `Promise.all()` | 适用于所有异步请求（不仅限于 Axios） |
-
----
 
 ### **2.3 控制并发请求数量**
 
@@ -185,8 +171,6 @@ fetchDataWithLimit();
 - **批量请求 API**
 - **确保即使部分请求失败，也不会影响其他请求**
 
----
-
 ### **2.4 控制请求间隔（限流）**
 
 如果 API 服务器限制**每秒请求次数**，可以使用 `setTimeout()` 控制请求间隔：
@@ -217,8 +201,6 @@ fetchWithThrottle(urls, 2000); // 每 2 秒请求一次
 
 - **API 限流场景**
 - **爬虫或数据抓取**
-
----
 
 ## **总结**
 

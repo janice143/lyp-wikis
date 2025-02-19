@@ -2,8 +2,6 @@
 
 MobX 提供了强大的响应式特性，但在大型应用中，**如何优化性能、调试状态变化、结合 TypeScript 进行类型管理**，是开发者需要深入理解的问题。本章将探讨 **MobX 的性能优化、调试工具、以及 TypeScript 的最佳实践**。
 
----
-
 ## **1. 如何优化 MobX 性能**
 
 MobX **自动追踪状态变化**，但如果**滥用 `observable` 或 `computed`，可能会导致组件不必要的重新渲染**。以下是提高 MobX 性能的几种最佳实践：
@@ -55,8 +53,6 @@ const App = () => {
 - **`Header` 组件不会因为 `count` 变化而重新渲染**
 - **只有 `Counter` 组件重新渲染**
 
----
-
 ### ✅ **最佳实践 2：使用 `React.memo` 避免不必要的渲染**
 
 即使 `observer` 能够优化 MobX 的状态变化，有时候也需要 **React.memo** 避免额外的组件更新：
@@ -76,8 +72,6 @@ const App = observer(() => {
 
 - `React.memo()` 让 `UserInfo` **只在 `name` 变化时渲染**
 - **配合 `observer` 提高性能**
-
----
 
 ## **2. `computed` 结合 `reaction`**
 
@@ -115,8 +109,6 @@ console.log(store.double); // double 计算 -> 20
 - **`double` 只在 `count` 变化时计算**
 - **如果 `count` 不变，读取 `double` 不会触发重新计算**
 
----
-
 ### **2.2 `reaction` 监听状态变化**
 
 如果只想在 `count` 变化时执行副作用（例如**发送 API 请求**），可以使用 `reaction`：
@@ -141,8 +133,6 @@ store.count = 2; // 输出 "count 变为: 2"
 
 - **执行副作用（如日志、数据存储、异步请求）**
 - **只在状态变化时执行代码，而不是每次渲染**
-
----
 
 ## **3. 调试 MobX**
 
@@ -179,8 +169,6 @@ configure({
 - **监控 `computed` 计算**
 - **追踪 `action` 调用**
 
----
-
 ### **3.2 使用 `spy()` 监控状态变化**
 
 `spy()` 可以 **监控所有 MobX 状态的变化**：
@@ -197,8 +185,6 @@ spy((event) => {
 
 - **排查状态异常**
 - **查看 `action` 的执行顺序**
-
----
 
 ### **3.3 使用 `trace()` 追踪状态**
 
@@ -223,8 +209,6 @@ console.log(store.double);
 - **查看 `computed` 是如何被触发的**
 - **调试状态更新**
 
----
-
 ## **4. MobX 与 TypeScript**
 
 MobX **完美支持 TypeScript**，可以通过 `observable`、`computed` 和 `action` 定义**强类型状态**。
@@ -244,8 +228,6 @@ class Store {
 ```
 
 ✅ **TypeScript 确保 `count` 是 `number` 类型
-
----
 
 ### **4.2 `computed` 和 `action` 的类型注解**
 
@@ -273,8 +255,6 @@ class Store {
 
 - **`computed` 的返回值有明确类型**
 - **`action` 需要返回 `void`**
-
----
 
 ## **总结**
 

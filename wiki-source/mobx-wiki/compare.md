@@ -2,8 +2,6 @@
 
 MobX 是一个**高效、灵活**的状态管理库，但在前端开发中，还有 **Redux、Recoil、Zustand** 等不同的方案可选。本章将从 **开发体验、学习成本、适用场景** 等角度对比 **MobX 与 Redux、Recoil、Zustand**，帮助你选择合适的状态管理工具。
 
----
-
 ## **1. MobX vs Redux**
 
 Redux 是 React 生态中最知名的状态管理库，而 MobX 提供了更**自动化的状态追踪**。两者的核心理念不同：
@@ -27,8 +25,6 @@ Redux 是 React 生态中最知名的状态管理库，而 MobX 提供了更**�
 - **更强的状态可预测性**，状态变化更透明
 - **官方支持 Redux Toolkit，简化了 Redux 代码**
 - **适用于大型应用**
-
----
 
 ### **📌 代码对比**
 
@@ -77,8 +73,6 @@ console.log(store.getState().count); // 1
 
 📌 **Redux 需要额外定义 action、reducer，代码更复杂，而 MobX 直接修改状态**。
 
----
-
 ## **2. MobX vs Recoil**
 
 Recoil 是 **React 官方推出的状态管理库**，适用于 **组件树状态共享**，它的设计灵感与 MobX 类似，但**更加适用于前端 UI 状态管理**。
@@ -100,8 +94,6 @@ Recoil 是 **React 官方推出的状态管理库**，适用于 **组件树状�
 
 - **React 官方支持，API 设计更符合 React Hooks**
 - **适用于 UI 组件状态（如主题、Modal 开关）**
-
----
 
 ### **📌 代码对比**
 
@@ -151,8 +143,6 @@ const Counter = () => {
 
 📌 **Recoil 的 `atom` 设计更符合 React Hooks 习惯，而 MobX 则更偏向 OOP 响应式编程。**
 
----
-
 ## **3. MobX vs Zustand**
 
 Zustand 是 **一个轻量级状态管理库**，提供了比 Redux 更简洁的 API，同时也比 MobX 更符合 Hooks 设计。
@@ -175,8 +165,6 @@ Zustand 是 **一个轻量级状态管理库**，提供了比 Redux 更简洁的
 - **超轻量（2KB），比 MobX 和 Redux 更简洁**
 - **仅使用 Hooks，API 设计直观**
 - **自动避免不必要的组件渲染**
-
----
 
 ### **📌 代码对比**
 
@@ -215,8 +203,6 @@ const Counter = () => {
 ```
 
 📌 **Zustand 代码更简洁，适用于小型项目，而 MobX 更适合复杂状态管理。**
-
----
 
 ## **总结**
 

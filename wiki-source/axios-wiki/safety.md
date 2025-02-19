@@ -2,8 +2,6 @@
 
 在前端开发中，**数据安全** 是非常重要的，特别是在使用 Axios 进行 HTTP 请求时，我们需要**防止数据泄露、确保用户身份认证、加密敏感信息**。本章将介绍 **如何加密请求数据、使用 JWT 进行身份认证、确保 API 请求的安全性**。
 
----
-
 ## **1. 请求数据加密**
 
 ### **1.1 为什么需要加密数据？**
@@ -13,8 +11,6 @@
 - **使用 HTTPS** 进行传输加密
 - **在请求前对数据进行加密**
 - **避免明文传输敏感信息**
-
----
 
 ### **1.2 使用 HTTPS 进行安全传输**
 
@@ -31,8 +27,6 @@ axios.defaults.baseURL = "https://secure-api.example.com";
 ```
 
 ✅ **确保所有请求都使用 HTTPS 传输**
-
----
 
 ### **1.3 在请求中加密敏感数据**
 
@@ -65,8 +59,6 @@ axios.post("https://api.example.com/login", { data: encryptedData })
 - **防止密码明文传输**
 - **保证数据的安全性**
 
----
-
 ## **2. 认证与授权**
 
 ### **2.1 使用 JWT 进行身份认证**
@@ -80,8 +72,6 @@ axios.post("https://api.example.com/login", { data: encryptedData })
 3. **前端存储 Token（`localStorage` / `sessionStorage` / `cookie`）**
 4. **每次请求 API 时，携带 Token 进行身份认证**
 5. **服务器校验 Token，返回数据**
-
----
 
 ### **2.2 在 Axios 请求中自动附加 Token**
 
@@ -108,8 +98,6 @@ axios.interceptors.request.use(config => {
 - **API 需要身份验证**
 - **用户操作需要鉴权**
 
----
-
 ### **2.3 处理 Token 过期**
 
 JWT Token 可能会过期，服务器通常返回 **401 Unauthorized**。可以在 **响应拦截器** 里处理：
@@ -132,8 +120,6 @@ axios.interceptors.response.use(
 - **自动处理 Token 失效**
 - **避免每个 API 请求都需要检查 Token**
 
----
-
 ## **3. 防止 CSRF（跨站请求伪造）**
 
 ### **3.1 什么是 CSRF？**
@@ -145,8 +131,6 @@ CSRF（Cross-Site Request Forgery）攻击，指的是**攻击者伪造用户请
 - **后端验证 `Referer` 头**
 - **前端请求时携带 CSRF Token**
 - **后端校验 CSRF Token**
-
----
 
 ### **3.2 在请求中携带 CSRF Token**
 
@@ -161,8 +145,6 @@ axios.defaults.headers.common["X-CSRF-Token"] = getCsrfToken(); // 从 Cookie �
 
 - **表单提交**
 - **需要防止 CSRF 攻击的 API**
-
----
 
 ## **4. 保护 API 免受 XSS 攻击**
 
@@ -182,8 +164,6 @@ XSS（跨站脚本攻击）指的是**恶意用户在输入框中插入 JavaScri
 {"message": "&lt;script&gt;alert('XSS 攻击');&lt;/script&gt;"}
 ```
 
----
-
 ### **4.2 在前端过滤用户输入**
 
 在提交数据之前，**对输入进行 HTML 转义**：
@@ -201,8 +181,6 @@ console.log(safeData); // &lt;script&gt;alert('XSS');&lt;/script&gt;
 
 - **用户输入的文本**
 - **富文本编辑器中的内容**
-
----
 
 ## **总结**
 

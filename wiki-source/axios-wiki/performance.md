@@ -2,8 +2,6 @@
 
 在实际开发中，频繁的 API 请求会导致**性能下降、服务器压力增加、用户体验变差**。Axios 提供了多种优化方案来提高前端请求的效率，包括**防止重复请求、数据缓存、懒加载、请求优化**等。本章将介绍 **如何优化 Axios 请求，提高应用性能和用户体验**。
 
----
-
 ## **1. 防止重复请求**
 
 ### **1.1 防止同一请求重复发送**
@@ -43,8 +41,6 @@ axios.interceptors.response.use(
 - **避免表单提交多次**
 - **提升服务器性能**
 
----
-
 ### **1.2 结合 `lodash` 进行请求节流**
 
 `lodash.throttle()` 可以**限制请求频率**，防止短时间内多次触发相同请求：
@@ -67,8 +63,6 @@ fetchUserData(); // 这个请求会被忽略
 
 - **搜索框防抖**
 - **防止短时间内多次提交请求**
-
----
 
 ## **2. 懒加载与数据缓存**
 
@@ -105,8 +99,6 @@ fetchWithCache("https://jsonplaceholder.typicode.com/users").then(data => consol
 - **列表页数据**
 - **用户信息（如个人资料）**
 
----
-
 ### **2.2 `axios-cache-adapter` 自动缓存**
 
 可以使用 `axios-cache-adapter` 自动缓存请求：
@@ -135,8 +127,6 @@ api.get("https://jsonplaceholder.typicode.com/users")
 - **长时间不变的 API（如国家列表、静态资源）**
 - **减少不必要的网络请求**
 
----
-
 ## **3. 代码分割与请求优化**
 
 ### **3.1 按需加载请求**
@@ -162,8 +152,6 @@ document.getElementById("nextPage").addEventListener("click", () => {
 - **分页加载**
 - **滚动加载（如无限滚动列表）**
 
----
-
 ### **3.2 合并多个请求**
 
 如果 API **允许批量获取数据**，可以**合并多个请求**，减少 HTTP 请求数量：
@@ -177,8 +165,6 @@ axios.get("https://jsonplaceholder.typicode.com/posts?_limit=10")
 
 - **获取多个数据项**
 - **减少请求次数，提高性能**
-
----
 
 ### **3.3 预加载数据**
 
@@ -200,8 +186,6 @@ document.getElementById("loadPage").addEventListener("click", loadPage);
 
 - **用户即将访问的页面**
 - **提高页面响应速度**
-
----
 
 ## **总结**
 

@@ -10,8 +10,6 @@
 
 使用请求拦截器，可以避免在每个请求中手动添加相同的配置，使代码更加**简洁、可维护**。
 
----
-
 ## **1. 使用请求拦截器**
 
 ### **1.1 基本使用**
@@ -44,8 +42,6 @@ axios.get("https://jsonplaceholder.typicode.com/posts/1")
 - 可以**修改请求配置**（如添加 `headers`）
 - 任何 `return config` 之外的异常都会进入 `error` 回调
 
----
-
 ### **1.2 统一附加身份认证 Token（JWT）**
 
 在**需要身份验证的 API**（如后端 RESTful API）中，我们通常需要在请求头中添加 `Authorization` 令牌（JWT）。
@@ -71,8 +67,6 @@ axios.interceptors.request.use(
 
 - **自动携带 Token**，避免在每个请求中重复添加
 - **确保用户身份验证**，适用于所有需要认证的 API
-
----
 
 ### **1.3 处理请求参数**
 
@@ -110,8 +104,6 @@ axios.post("https://api.example.com/login", { username: "admin", password: "1234
 - 统一转换 `POST` 请求的数据格式
 - 避免每次都手动 `qs.stringify()`
 
----
-
 ## **2. 请求拦截器的常见场景**
 
 ### **2.1 自动附加 Token**
@@ -133,8 +125,6 @@ axios.interceptors.request.use(config => {
 - 需要用户登录的 API
 - 需要 **OAuth 认证** 的 API
 
----
-
 ### **2.2 记录请求日志**
 
 可以在拦截器中**打印所有请求信息**，用于调试：
@@ -150,8 +140,6 @@ axios.interceptors.request.use(config => {
 
 - 调试 API 请求
 - 记录 API 日志，方便排查错误
-
----
 
 ### **2.3 统一添加公共请求参数**
 
@@ -170,8 +158,6 @@ axios.interceptors.request.use(config => {
 ✅ **适用于**
 
 - 需要**统一添加某个参数**（如语言 `lang`、API 版本 `v=1.0`）
-
----
 
 ### **2.4 限制请求频率（防止短时间内重复请求）**
 
@@ -194,8 +180,6 @@ axios.interceptors.request.use(config => {
 
 - 防止用户短时间内连续点击按钮，造成重复请求
 - 避免 API 短时间内被滥用
-
----
 
 ### **2.5 处理超时自动重试**
 
@@ -222,8 +206,6 @@ axios.interceptors.request.use(
 - **请求失败后自动重试**，提高请求成功率
 - **网络不稳定时的请求优化**
 
----
-
 ## **3. 解除请求拦截器**
 
 有些情况下，我们可能需要**移除某个拦截器**：
@@ -242,8 +224,6 @@ axios.interceptors.request.eject(myInterceptor);
 
 - 只想拦截**特定 API 请求**
 - 运行时需要**动态移除拦截**
-
----
 
 ## **总结**
 

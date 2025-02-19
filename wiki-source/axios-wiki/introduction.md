@@ -20,14 +20,12 @@ Axios 适用于各种 Web 应用场景，包括：
 - **与 GraphQL、REST API 交互**
 - **处理跨域请求**
 
----
-
 ### **1.1.2 Axios vs Fetch：对比**
 
 JavaScript 另一种发送 HTTP 请求的方式是 **Fetch API**，但 Axios 具有一些 Fetch API 不具备的优势。
 
 | 特性 | Axios | Fetch API |
-|------|-------|----------|
+||-|-|
 | **基于 Promise** | ✅ | ✅ |
 | **默认自动 JSON 解析** | ✅ | ❌（需手动 `.json()` 解析） |
 | **支持请求 & 响应拦截器** | ✅ | ❌ |
@@ -44,8 +42,6 @@ JavaScript 另一种发送 HTTP 请求的方式是 **Fetch API**，但 Axios 具
 - **更好的错误处理**，Fetch 仅在网络失败时抛出错误，Axios 任何 HTTP 状态异常都会抛错
 - **支持请求取消（CancelToken）**，Fetch 需要 `AbortController`
 - **跨浏览器兼容性更强**，支持 IE
-
----
 
 ## **1.2 Axios 的核心特性**
 
@@ -64,8 +60,6 @@ axios.get("https://jsonplaceholder.typicode.com/posts")
 - `axios.get()` 返回 **Promise**
 - 使用 `.then()` 处理**成功响应**
 - 使用 `.catch()` 处理**错误**
-
----
 
 ### **1.2.2 请求和响应拦截器**
 
@@ -96,8 +90,6 @@ axios.interceptors.response.use(response => {
 });
 ```
 
----
-
 ### **1.2.3 客户端支持与跨平台支持**
 
 Axios **支持多种运行环境**：
@@ -126,8 +118,6 @@ axios.get("https://api.example.com/data")
 ```
 
 - 在 **Node.js 服务器端** 直接请求 API，无需 `fetch()`。
-
----
 
 ## **总结**
 

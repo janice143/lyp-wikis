@@ -2,8 +2,6 @@
 
 在使用 Axios 进行 API 请求时，可能会遇到 **跨域请求（CORS）问题**。如果后端服务器未正确配置 CORS 规则，浏览器会拒绝请求。本章将介绍 **CORS 的概念、常见问题、解决方案**，并提供 **Axios 处理跨域的最佳实践**。
 
----
-
 ## **1. 跨域请求概念**
 
 ### **1.1 什么是 CORS？**
@@ -14,7 +12,7 @@ CORS（Cross-Origin Resource Sharing，跨源资源共享）是一种浏览器**
 **协议、域名、端口必须一致**，否则浏览器会拦截请求。
 
 | 请求来源 | 目标服务器 | 是否跨域 |
-|----------|------------|--------|
+|-||--|
 | `https://example.com` | `https://example.com/api` | ❌ 不跨域 |
 | `https://example.com` | `https://api.example.com` | ✅ 跨域 |
 | `http://example.com` | `https://example.com` | ✅ 跨域（协议不同） |
@@ -35,8 +33,6 @@ Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE
 Access-Control-Allow-Headers: Content-Type, Authorization
 ```
-
----
 
 ## **2. 解决跨域问题**
 
@@ -84,8 +80,6 @@ location /api/ {
 }
 ```
 
----
-
 ### **2.2 使用代理解决跨域**
 
 如果无法修改后端代码，可以在**前端开发环境**使用 **代理服务器**，使请求看起来是同源的。
@@ -131,8 +125,6 @@ app.listen(3000, () => console.log("Proxy server running on port 3000"));
 
 前端可以请求 `http://localhost:3000/api`，代理服务器会转发到 `https://api.example.com/api`，避免跨域问题。
 
----
-
 ### **2.3 Axios 配置请求头**
 
 如果服务器已经支持 CORS，但仍然报错，可能是**请求头不匹配**，可以手动添加 `headers`：
@@ -152,8 +144,6 @@ axios.get("https://api.example.com/data", {
 
 - **服务器未返回 `Access-Control-Allow-Headers`** → 需要后端允许 `Authorization`
 - **`OPTIONS` 预检失败** → 服务器需要支持 `OPTIONS` 请求
-
----
 
 ## **3. 跨域配置示例**
 
@@ -182,8 +172,6 @@ axios.get("https://api.example.com/data", { withCredentials: true })
 - **服务器需要身份验证（Cookies）**
 - **后端已配置 `Access-Control-Allow-Credentials: true`**
 
----
-
 ### **3.3 使用 JSONP 作为跨域解决方案（已过时）**
 
 JSONP（JSON with Padding）是早期的跨域方案，适用于 **GET 请求**：
@@ -202,8 +190,6 @@ JSONP（JSON with Padding）是早期的跨域方案，适用于 **GET 请求**�
 - **只能用于 `GET` 请求**
 - **安全性较低**
 - **现代 API 已不推荐**
-
----
 
 ## **总结**
 

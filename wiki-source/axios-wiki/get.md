@@ -2,8 +2,6 @@
 
 在 Web 开发中，常见的 HTTP 请求方法包括 **GET、POST、PUT、DELETE**，它们用于不同的 API 交互需求。Axios 提供了简洁的 API 来发送这些请求，并支持 **查询参数、请求体、请求头、请求超时、请求取消** 等功能。本章将详细介绍 Axios 的各种请求方式及其进阶用法。
 
----
-
 ## **1. 发送 GET 请求**
 
 ### **1.1 基本 GET 请求**
@@ -21,8 +19,6 @@ axios.get("https://jsonplaceholder.typicode.com/posts")
 - **不带请求体**
 - **适用于获取资源**
 - **可携带查询参数**
-
----
 
 ### **1.2 传递查询参数**
 
@@ -55,8 +51,6 @@ axios.get(`https://jsonplaceholder.typicode.com/posts?userId=1&_limit=5`);
 
 - **推荐使用 `params` 选项**，Axios 会自动编码参数，避免手动拼接错误。
 
----
-
 ### **1.3 传递请求头**
 
 如果 API 需要特定的请求头（如 `Authorization`），可以使用 `headers`：
@@ -75,8 +69,6 @@ axios.get("https://api.example.com/data", {
 
 - 需要身份认证的 API（如 `Authorization`）。
 - 需要自定义 `Accept` 类型的请求。
-
----
 
 ## **2. 发送 POST 请求**
 
@@ -100,8 +92,6 @@ axios.post("https://jsonplaceholder.typicode.com/posts", {
 - **可以携带请求体**
 - **默认 `Content-Type: application/json`**
 
----
-
 ### **2.2 发送表单数据**
 
 有些 API 需要 **`application/x-www-form-urlencoded`** 格式：
@@ -122,8 +112,6 @@ axios.post("https://api.example.com/login", formData, {
 
 - `application/json`：直接发送 JSON（适用于大部分 API）。
 - `application/x-www-form-urlencoded`：适用于传统表单提交（如登录）。
-
----
 
 ## **3. 发送 PUT 和 DELETE 请求**
 
@@ -146,8 +134,6 @@ axios.put("https://jsonplaceholder.typicode.com/posts/1", {
 - **适用于更新数据**
 - **需要提供完整数据**
 
----
-
 ### **3.2 发送 DELETE 请求**
 
 DELETE 请求用于 **删除资源**：
@@ -162,8 +148,6 @@ axios.delete("https://jsonplaceholder.typicode.com/posts/1")
 
 - **不需要请求体**
 - **只需要资源 ID**
-
----
 
 ## **4. 请求取消与超时设置**
 
@@ -201,8 +185,6 @@ source.cancel("用户取消了请求");
 - **用户切换页面时**，防止加载无用数据。
 - **搜索框请求防抖**，避免重复请求。
 
----
-
 ### **4.2 请求超时**
 
 如果请求时间过长，可以使用 `timeout` 选项：
@@ -225,8 +207,6 @@ axios.get("https://api.example.com/data", {
 
 - **默认无超时限制**
 - **适用于慢速 API，防止页面卡顿**
-
----
 
 ## **总结**
 

@@ -8,8 +8,6 @@ MobX 与 React 结合使用时，可以**让组件自动响应状态变化**，�
 - **类组件 vs 函数组件**
 - **处理异步数据（flow & async action）**
 
----
-
 ## **1. `observer` 高阶组件**
 
 `observer` 是 MobX 提供的 **高阶组件（HOC）**，用于让 React 组件**自动监听 `observable` 变化**。
@@ -53,8 +51,6 @@ export default Counter;
 - **状态 `count` 变化时，UI 自动更新**
 - **没有 `useState()`，但组件仍然是状态驱动的**
 
----
-
 ### **1.2 `observer` 内部原理**
 
 `observer` **只会更新受影响的组件**，类似 `React.memo()`，提高性能：
@@ -89,8 +85,6 @@ const App = () => {
 
 - **只有 `Counter` 组件会重新渲染**
 - **`Header` 组件不会重新渲染，提高性能**
-
----
 
 ## **2. 使用 `useLocalObservable` 管理组件状态**
 
@@ -127,16 +121,12 @@ export default Counter;
 - **不需要全局状态的场景**
 - **比 `useState` 更直观**
 
----
-
 ## **3. 使用 Provider 和 useStore 共享全局状态**
 
 在大型应用中，通常需要一个**全局状态管理方案**。可以使用：
 
 - **`createContext()` + `useStore()`**
 - **`Provider` 提供全局 store**
-
----
 
 ### **3.1 创建全局 Store**
 
@@ -160,8 +150,6 @@ const StoreContext = createContext(new RootStore());
 
 export const useStore = () => useContext(StoreContext);
 ```
-
----
 
 ### **3.2 使用 Provider 提供全局状态**
 
@@ -193,8 +181,6 @@ const App = () => {
 - **在全局 `Provider` 提供 store**
 - **`useStore()` 让任意组件访问全局状态**
 - **比 Redux 代码更少，管理更简单**
-
----
 
 ## **4. 类组件 vs 函数组件中的 MobX**
 
@@ -240,8 +226,6 @@ export default Counter;
 - **但 `@observer` 依赖 Babel，复杂度更高**
 - **更推荐函数组件**
 
----
-
 ## **5. 处理异步数据（flow 和 async action）**
 
 MobX **支持异步状态管理**，但推荐使用 `flow` 或 `async action` 处理异步逻辑。
@@ -275,8 +259,6 @@ store.fetchUsers();
 - **自动捕获错误**
 - **不会影响 UI 渲染**
 
----
-
 ### **5.2 使用 `async action`**
 
 ```javascript
@@ -298,8 +280,6 @@ class Store {
 
 - **简单的异步请求**
 - **不需要 `flow` 的情况下**
-
----
 
 ## **总结**
 

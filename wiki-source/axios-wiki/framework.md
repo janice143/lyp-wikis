@@ -2,8 +2,6 @@
 
 在现代 Web 开发中，前端框架（如 **React、Vue、Angular**）通常需要与后端 API 交互。**Axios** 作为强大的 HTTP 客户端，在这些框架中被广泛使用。本章将介绍 **如何在 React、Vue 和 Angular 中集成 Axios**，并提供最佳实践。
 
----
-
 ## **1. React 中使用 Axios**
 
 ### **1.1 在 React 组件中使用 Axios**
@@ -42,8 +40,6 @@ export default UserList;
 - `useState()` 存储返回的数据并更新 UI
 - `catch()` 处理错误，避免页面崩溃
 
----
-
 ### **1.2 使用 `useEffect()` 监听依赖**
 
 如果请求数据**依赖于某个状态**，可以在 `useEffect()` 中监听变化：
@@ -61,8 +57,6 @@ useEffect(() => {
 
 - **监听 URL 参数变化**
 - **分页或筛选数据**
-
----
 
 ### **1.3 取消请求（防止内存泄漏）**
 
@@ -88,8 +82,6 @@ useEffect(() => {
 
 - **组件切换时取消未完成请求**
 - **防止用户快速操作导致重复请求**
-
----
 
 ## **2. Vue 中使用 Axios**
 
@@ -129,8 +121,6 @@ export default {
 - `data()` 存储 API 返回的数据
 - `catch()` 捕获错误，防止 UI 崩溃
 
----
-
 ### **2.2 Vue 3 组合式 API（Composition API）**
 
 Vue 3 推荐使用 `setup()` 结合 `onMounted()` 进行请求：
@@ -161,8 +151,6 @@ export default {
 
 - **Vue 3 组合式 API**
 - **更清晰的代码结构**
-
----
 
 ### **2.3 Vuex 中使用 Axios**
 
@@ -195,8 +183,6 @@ export default {
 - **Vuex 全局状态管理**
 - **多个组件共享数据**
 
----
-
 ## **3. Angular 中使用 Axios**
 
 Angular **官方推荐使用 `HttpClientModule`** 进行 HTTP 请求，但我们仍然可以使用 Axios。
@@ -225,8 +211,6 @@ import axios from "axios";
 })
 export class AppModule { }
 ```
-
----
 
 ### **3.2 在组件中使用 Axios**
 
@@ -259,12 +243,10 @@ export class UserListComponent implements OnInit {
 - **需要手动控制请求行为**
 - **不想使用 Angular `HttpClientModule`**
 
----
-
 ### **3.3 Axios 与 Angular `HttpClient` 对比**
 
 | 功能 | `Axios` | `HttpClient`（推荐） |
-|------|---------|----------------|
+|||-|
 | 基于 | `Promise` | `Observable` |
 | 自动 JSON 解析 | ✅ | ✅ |
 | 请求拦截器 | ✅（内置） | ✅（拦截器） |
@@ -272,8 +254,6 @@ export class UserListComponent implements OnInit {
 | 适用于 | **前端 + Node.js** | **Angular 项目** |
 
 🚀 **Angular 推荐使用 `HttpClientModule`，Axios 适用于需要在前后端共用的场景！**
-
----
 
 ## **总结**
 

@@ -2,8 +2,6 @@
 
 MobX 通过 **observable（可观察状态）、action（修改状态）、computed（计算属性）、reaction（副作用处理）** 组成了一个强大的响应式系统。本章将详细介绍 MobX 的核心概念及其最佳实践。
 
----
-
 ## **1. observable（可观察状态）**
 
 **`observable`** 是 MobX 的核心，负责让**对象、数组、Map、Set** 变成 **响应式**，当状态变化时，依赖它的组件会自动更新。
@@ -57,8 +55,6 @@ class Store {
 
 **`makeAutoObservable` 适用于大部分场景**，但如果你需要更精细的控制（如 `computed` 和 `action`），可以使用 `makeObservable`。
 
----
-
 ## **2. action（修改状态的操作）**
 
 默认情况下，**MobX 允许直接修改 observable 状态**，但推荐使用 **`action`** 来管理状态变更，以提高可读性和可维护性。
@@ -94,8 +90,6 @@ class Store {
 - `increment()` 负责**修改状态**
 - `action` 让 MobX **知道该方法会修改状态**，从而优化性能
 
----
-
 ### **2.3 `runInAction` 处理异步操作**
 
 `runInAction` 允许在异步请求完成后**批量更新状态**：
@@ -126,8 +120,6 @@ class Store {
 
 - **在 `runInAction` 里批量修改状态**，避免多次渲染
 - **适用于异步请求**
-
----
 
 ## **3. computed（计算属性）**
 
@@ -165,8 +157,6 @@ console.log(store.double); // 20
 
 **computed 只有在 `count` 变化时才会重新计算**，避免不必要的计算。
 
----
-
 ## **4. reaction（副作用处理）**
 
 **reaction** 允许我们**在状态变化时执行副作用**，常用于**日志、数据同步、异步请求**等场景。
@@ -193,8 +183,6 @@ store.count = 2; // 打印: Count changed: 2
 - **初次执行**
 - **每次 `count` 变化时都会触发**
 
----
-
 ### **4.2 `reaction`（显式指定依赖）**
 
 **`reaction` 只监听**特定的 `observable`，并在**其变化时执行副作用**：
@@ -216,8 +204,6 @@ store.count = 2; // 打印: Count changed: 2
 ✅ **适用于**
 
 - **只监听特定字段，而不是所有 observable**
-
----
 
 ### **4.3 `when`（只运行一次的副作用）**
 
@@ -241,8 +227,6 @@ store.isLoaded = false; // 不会再触发
 
 - **某个任务完成后执行副作用**
 - **只想执行一次的逻辑**
-
----
 
 ## **总结**
 
