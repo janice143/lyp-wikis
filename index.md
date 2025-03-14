@@ -69,8 +69,12 @@ features:
   - icon: M
     title: MobX Wiki
     details: 本小册系统性介绍 MobX，从基础概念到高级特性，帮助开发者理解其核心思想，并掌握如何在 React 或其他框架中高效地管理状态，实现响应式数据流。
-
     link: /wiki-source/mobx-wiki/introduction
+  - icon: 
+      src: /images/chrome.svg
+    title: Chrome Extension Wiki
+    details: 本小册系统性介绍 Chrome Extension（Chrome 插件）的开发过程，涵盖基础概念、核心 API、进阶功能、性能优化及发布流程，帮助开发者从零开始构建高效的 Chrome 插件。
+    link: /wiki-source/chrome-extension-wiki
 ---
 
 

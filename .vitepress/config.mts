@@ -598,6 +598,48 @@ export default defineConfig({
                 ]
               }
             ]
+          },
+          {
+            text: 'Chrome extension知识库',
+            items: [
+              {
+                text: '知识层',
+                items: [
+                  {
+                    text: '简介',
+                    link: '/wiki-source/chrome-extension-wiki/introduction'
+                  },
+                  {
+                    text: 'Chrome Extension 基础',
+                    link: '/wiki-source/chrome-extension-wiki/basic'
+                  },
+                  {
+                    text: '核心组件与 API',
+                    link: '/wiki-source/chrome-extension-wiki/core-api'
+                  },
+                  {
+                    text: '通信机制',
+                    link: '/wiki-source/chrome-extension-wiki/communication'
+                  },
+                  {
+                    text: '高级功能开发*',
+                    link: '/wiki-source/chrome-extension-wiki/advanced'
+                  },
+                  {
+                    text: '插件性能优化',
+                    link: '/wiki-source/chrome-extension-wiki/performance'
+                  },
+                  {
+                    text: '调试与测试',
+                    link: '/wiki-source/chrome-extension-wiki/debug'
+                  },
+                  {
+                    text: '发布与更新',
+                    link: '/wiki-source/chrome-extension-wiki/publish'
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
