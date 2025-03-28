@@ -640,6 +640,60 @@ export default defineConfig({
                 ]
               }
             ]
+          },
+          {
+            text: 'Vue 2知识库',
+            items: [
+              {
+                text: '知识层',
+                items: [
+                  {
+                    text: '简介',
+                    link: '/wiki-source/vue2-wiki/introduction'
+                  },
+                  {
+                    text: 'Vue 2 基础语法',
+                    link: '/wiki-source/vue2-wiki/basic'
+                  },
+                  {
+                    text: '组件系统',
+                    link: '/wiki-source/vue2-wiki/components'
+                  },
+                  {
+                    text: '数据管理',
+                    link: '/wiki-source/vue2-wiki/state'
+                  },
+                  {
+                    text: '路由系统',
+                    link: '/wiki-source/vue2-wiki/router'
+                  },
+                  {
+                    text: 'Vuex 状态管理',
+                    link: '/wiki-source/vue2-wiki/vuex'
+                  },
+                  {
+                    text: '自定义指令与过滤器',
+                    link: '/wiki-source/vue2-wiki/directive'
+                  },
+                  {
+                    text: '性能优化',
+                    link: '/wiki-source/vue2-wiki/performance'
+                  },
+                  {
+                    text: '异步处理',
+                    link: '/wiki-source/vue2-wiki/async'
+                  },
+                  {
+                    text: '项目架构与构建',
+                    link: '/wiki-source/vue2-wiki/project'
+                  },
+                  {
+                    text: '样式处理',
+                    link: '/wiki-source/vue2-wiki/style'
+                  }
+                ]
+              }
+            ]
           }
         ]
       }

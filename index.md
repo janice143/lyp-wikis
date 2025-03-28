@@ -75,6 +75,10 @@ features:
     title: Chrome Extension Wiki
     details: 本小册系统性介绍 Chrome Extension（Chrome 插件）的开发过程，涵盖基础概念、核心 API、进阶功能、性能优化及发布流程，帮助开发者从零开始构建高效的 Chrome 插件。
     link: /wiki-source/chrome-extension-wiki
+  - icon: V
+    title: Vue2 Wiki
+    details: 本小册系统性梳理了 Vue 2 的核心知识体系，从基础语法到高级特性，帮助开发者全面掌握 Vue 2 开发技能与项目实践能力。
+    link: /wiki-source/vue2-wiki/introduction
 ---
 
 
